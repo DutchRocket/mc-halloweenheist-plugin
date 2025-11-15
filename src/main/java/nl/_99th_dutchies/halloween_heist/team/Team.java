@@ -33,7 +33,7 @@ public class Team {
 
     public void playerSurrendered(Player player, boolean surrendered) { players.replace(player, surrendered); }
 
-    public boolean playerHasSurrendered(Player player){ return players.get(player); }
+    public boolean playerHasSurrendered(Player player){ return players.getOrDefault(player, false); }
 
     public Boolean allPlayersSurrendered() { return !players.containsValue(false);}
 }

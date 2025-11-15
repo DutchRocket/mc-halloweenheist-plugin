@@ -27,12 +27,12 @@ public class CommandUnsurrender extends ACommand {
         Team team = this.plugin.teamManager.getTeamForPlayer(p);
 
         if(team == null){
-            sender.sendMessage("You are not in a team");
+            sender.sendMessage(ChatColor.RED + "You are not in a team");
             return false;
         }
 
         if(!team.playerHasSurrendered(p)){
-            sender.sendMessage("You are not surrendered");
+            sender.sendMessage(ChatColor.RED + "You are not surrendered");
             return true;
         }
 
